@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <script>
+            function ubah(){
+                let Nilai = Number(document.getElementById("mau").value);
+                let pilihan = document.getElementById("valas").value;
+                let dl = Number("9915");
+                let dlsg = Number("13472");
+                let rm = Number("874");
+                let yj = Number("120");
+                let eu = Number("15888");
+                let ras = Number("3592");
+                let dinkhuit = Number("46065");
+                if (isNaN(Nilai)) {
+                    alert('isi kalkulator Menggunakan angka!');
+                }else{
+                    if (pilihan == "dollar"){
+                        hasil = Nilai * dl;
+                        document.getElementById("hasil").innerHTML = " Rp."+ hasil;
+                    }
+                    if (pilihan == "dollarsg"){
+                        hasil = Nilai * dlsg;
+                        document.getElementById("hasil").innerHTML = " Rp."+ hasil;
+                    }
+                    if (pilihan == "rmal"){
+                        hasil = Nilai * rm;
+                        document.getElementById("hasil").innerHTML = " Rp."+ hasil;
+                    }
+                    if (pilihan == "yenj"){
+                        hasil = Nilai * yj;
+                        document.getElementById("hasil").innerHTML = " Rp."+ hasil;
+                    }
+                    if (pilihan == "euro"){
+                        hasil = Nilai * eu;
+                        document.getElementById("hasil").innerHTML = " Rp."+ hasil;
+                    }
+                    if (pilihan == "riyal"){
+                        hasil = Nilai * ras;
+                        document.getElementById("hasil").innerHTML = " Rp."+ hasil;
+                    }
+                    if (pilihan == "dinarkhuait"){
+                        hasil = Nilai * dinkhuit;
+                        document.getElementById("hasil").innerHTML = " Rp."+ hasil;
+                    }    
+                }
+            }
+        </script>
+        </script>
+    </head>
+    <body background="qw.jpg" style="background-size: 1200px">
+        <h1 align="center" style="background-color: black;color: white" >Calculator Value </h1>
+        <form id="frm1">
+            <fieldset style="margin:100px;border-color: white;border-width: 4px;background-color: white">
+                <label ><b>Masukan Banyak Nilai : </b></label>
+                <input type="text" id="mau" value="" onchange="ubah()">
+            </fieldset>
+            <fieldset style="margin: 100px;border-color: white;border-width: 4px;background-color: white">
+                <label><b>Valas : </b></label>
+                <select id="valas" onchange="ubah()">
+                    <option>--Pilih--</option>
+                    <option value="dollar" id="dollar">Dollar US</option>
+                    <option value="dollarsg" id="dollarsg">Dollar Singapore</option>
+                    <option value="rmal" id="rmal">Ringgit Malaysia</option>
+                    <option value="yenj" id="yenj">Yen Jepang</option>
+                    <option value="euro" id="euro">Euro</option>
+                    <option value="riyal" id="riyal">Riyal Arab Saudi</option>
+                    <option value= "dinarkhuait" id="dinarkhuait">Dinar Kuwait</option>
+                </select>
+            </fieldset>
+            <fieldset style="margin: 100px;border-color: white;border-width: 4px;background-color: white">
+                <h4 id="hasil"><b>Hasil</b></h4>
+            </fieldset>
+        </form>
+    </body>
+</html>
